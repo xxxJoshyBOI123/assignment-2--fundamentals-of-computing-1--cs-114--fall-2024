@@ -2,28 +2,33 @@ import java.util.Scanner;
 
 public class Diamond {
    public static void main(String[] args) {
-      System.out.println("Enter a number: ");
       Scanner input = new Scanner(System.in);
+      System.out.println("Enter a number: ");
       int num = input.nextInt();
 
-      int count = 1;
-      for(int topspaces = 1; topspaces < num; topspaces++);{
-        System.out.print(" ");
+      if(num % 2 == 1) {
 
+      for(int starspace = 1; starspace <= num; starspace++) {
+
+          for(int diamondstar = 1; diamondstar <= (num - starspace)/2; diamondstar++) {
+             System.out.print(" ");
+          }
+          for(int diamondstar = 0; diamondstar <= starspace; diamondstar++) {
+             System.out.print("*");
+          }
+          System.out.println();
       }
-      for(int topstars = 1; topstars < num; topstars++); {
-        System.out.print("*");
+
+      for(int starspace = num - 1; starspace >= 0; starspace--) {
+
+          for(int diamondstar = 1; diamondstar <= (num - starspace)/2; diamondstar++) {
+              System.out.print(" ");
+          }
+          for(int diamondstar = 1; diamondstar <= starspace; diamondstar++) {
+              System.out.print("*");
+          }
+          System.out.println();
       }
-
-    System.out.println();
-
-      for(int botspaces = 1; botspaces < num; botspaces++); {
-        System.out.print(" ");
-     }
-     for(int botstars = 1; botstars < num; botstars++); {
-        System.out.print("*");
-
-     }
-    System.out.println();
    }
+}
 }
