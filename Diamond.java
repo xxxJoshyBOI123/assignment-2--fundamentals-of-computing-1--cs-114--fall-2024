@@ -8,27 +8,65 @@ public class Diamond {
 
       if(num % 2 == 1) {
 
-      for(int starspace = 1; starspace <= num; starspace++) {
+      for(int starspace = 1; starspace < num; starspace+=2) {
 
-          for(int diamondstar = 1; diamondstar <= (num - starspace)/2; diamondstar++) {
+          for(int diamondstar = 0; diamondstar < (num - starspace)/2; diamondstar++) {
              System.out.print(" ");
           }
-          for(int diamondstar = 0; diamondstar <= starspace; diamondstar++) {
+          for(int diamondstar = 0; diamondstar < starspace; diamondstar++) {
              System.out.print("*");
           }
           System.out.println();
       }
 
-      for(int starspace = num - 1; starspace >= 0; starspace--) {
+      for(int starspace = num; starspace > 0; starspace-=2) {
 
-          for(int diamondstar = 1; diamondstar <= (num - starspace)/2; diamondstar++) {
+          for(int diamondstar = 0; diamondstar < (num - starspace)/2; diamondstar++) {
               System.out.print(" ");
           }
-          for(int diamondstar = 1; diamondstar <= starspace; diamondstar++) {
+          for(int diamondstar = 0; diamondstar < starspace; diamondstar++) {
               System.out.print("*");
           }
           System.out.println();
       }
+}
+  else {
+
+      if(num % 2 == 0) {
+
+      for(int starspace = 1; starspace <= (num - 1); starspace++) {
+         System.out.print(" ");
+      }
+      System.out.print("* ");
+      System.out.println();
+
+      for(int starspace = 1; starspace < num; starspace+=2) {
+
+           for(int diamondstar = 0; diamondstar < (num - 1 - starspace); diamondstar++) {
+              System.out.print(" ");
+           }
+           for(int diamondstar = 0; diamondstar <= starspace; diamondstar++) {
+              System.out.print("* ");
+           }
+           System.out.println();
+      }
+      for(int starspace = num - 2; starspace > 0; starspace-=2) {
+
+          for(int diamondstar = 0; diamondstar < (num - starspace); diamondstar++) {
+           System.out.print(" ");
+          }
+          for(int diamondstar = 0; diamondstar < starspace; diamondstar++) {
+           System.out.print("* ");
+          }
+          System.out.println();
+        }
+        for(int starspace = 1; starspace <= (num - 1); starspace++) {
+           System.out.print(" ");
+        }
+        System.out.print("* ");
+      }
+    input.close();
    }
+  }
 }
-}
+
