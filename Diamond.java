@@ -5,5 +5,15 @@ public class Diamond {
     System.out.println("Enter a number: ");
     Scanner input = new Scanner(System.in);
     int num = input.nextInt();
+
+    int count = 1;
+    for(int topspaces = 1; topspaces < num; topspaces++);{
+      System.out.print(" ");
+
+    }
+    for(int topstars = 1; topstars < num; topstars++);
+      System.out.print("*");
+
   }
+  System.out.println();
 }
