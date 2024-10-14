@@ -6,7 +6,7 @@ public class Diamond {
       System.out.println("Enter a number: ");
       int num = input.nextInt();
 
-      if(num % 2 == 1) {
+      if(num % 2 == 1) { //for the odd diamond
 
       for(int starspace = 1; starspace < num; starspace+=2) {
 
@@ -29,10 +29,9 @@ public class Diamond {
           }
           System.out.println();
       }
-}
-  else {
+} else {
 
-      if(num % 2 == 0) {
+      if(num % 2 == 0) { //for the even diamond
 
       for(int starspace = 1; starspace <= (num - 1); starspace++) {
          System.out.print(" ");
